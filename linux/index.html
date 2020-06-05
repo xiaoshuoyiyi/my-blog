@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux指令 | JobbbbZhang的博客</title>
+    <meta name="description" content="my blog">
+    <meta name="generator" content="VuePress 1.3.1">
+    
+    
+    <link rel="preload" href="/my-blog/assets/css/0.styles.716af2f0.css" as="style"><link rel="preload" href="/my-blog/assets/js/app.43e0b704.js" as="script"><link rel="preload" href="/my-blog/assets/js/2.da7dd8de.js" as="script"><link rel="preload" href="/my-blog/assets/js/25.6e01f1fb.js" as="script"><link rel="prefetch" href="/my-blog/assets/js/10.21d23800.js"><link rel="prefetch" href="/my-blog/assets/js/11.3d2a5cd4.js"><link rel="prefetch" href="/my-blog/assets/js/12.c4b14ab7.js"><link rel="prefetch" href="/my-blog/assets/js/13.43b628c6.js"><link rel="prefetch" href="/my-blog/assets/js/14.4185c043.js"><link rel="prefetch" href="/my-blog/assets/js/15.abc90814.js"><link rel="prefetch" href="/my-blog/assets/js/16.734020c3.js"><link rel="prefetch" href="/my-blog/assets/js/17.de8bf93a.js"><link rel="prefetch" href="/my-blog/assets/js/18.33441712.js"><link rel="prefetch" href="/my-blog/assets/js/19.afb8af86.js"><link rel="prefetch" href="/my-blog/assets/js/20.75170fb5.js"><link rel="prefetch" href="/my-blog/assets/js/21.1f8f2e08.js"><link rel="prefetch" href="/my-blog/assets/js/22.c180a62a.js"><link rel="prefetch" href="/my-blog/assets/js/23.fb4f133e.js"><link rel="prefetch" href="/my-blog/assets/js/24.4fb8c784.js"><link rel="prefetch" href="/my-blog/assets/js/26.5b8b0d04.js"><link rel="prefetch" href="/my-blog/assets/js/27.37a69a62.js"><link rel="prefetch" href="/my-blog/assets/js/28.ea7998f3.js"><link rel="prefetch" href="/my-blog/assets/js/29.69bf2fdb.js"><link rel="prefetch" href="/my-blog/assets/js/3.d30302f3.js"><link rel="prefetch" href="/my-blog/assets/js/30.25b35296.js"><link rel="prefetch" href="/my-blog/assets/js/4.89f72591.js"><link rel="prefetch" href="/my-blog/assets/js/5.2fae5614.js"><link rel="prefetch" href="/my-blog/assets/js/6.6b705a1d.js"><link rel="prefetch" href="/my-blog/assets/js/7.ccf5f24f.js"><link rel="prefetch" href="/my-blog/assets/js/8.b6dde3c5.js"><link rel="prefetch" href="/my-blog/assets/js/9.1c983b56.js">
+    <link rel="stylesheet" href="/my-blog/assets/css/0.styles.716af2f0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/my-blog/" class="home-link router-link-active"><img src="/my-blog/img/logo.jpeg" alt="JobbbbZhang的博客" class="logo"> <span class="site-name can-hide">JobbbbZhang的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/my-blog/front/javascript/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/my-blog/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/my-blog/linux/" class="nav-link router-link-exact-active router-link-active">
+  Linux
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/my-blog/more/css&amp;html/" class="nav-link">
+  CSS&amp;HTML
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/experience/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/markdown/" class="nav-link">
+  MarkDown语法
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/wiki.html" class="nav-link">
+  WIKI
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/xiaoshuoyiyi" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="联系" class="dropdown-title"><span class="title">联系</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="mailto:xiaoshuoyi@163.com" class="nav-link external">
+  邮箱
+  <!----></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-blog/front/javascript/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/my-blog/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/my-blog/linux/" class="nav-link router-link-exact-active router-link-active">
+  Linux
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/my-blog/more/css&amp;html/" class="nav-link">
+  CSS&amp;HTML
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/experience/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/markdown/" class="nav-link">
+  MarkDown语法
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/wiki.html" class="nav-link">
+  WIKI
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/xiaoshuoyiyi" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="联系" class="dropdown-title"><span class="title">联系</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="mailto:xiaoshuoyi@163.com" class="nav-link external">
+  邮箱
+  <!----></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/my-blog/linux/" class="active sidebar-link">Linux指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/my-blog/linux/#公钥信任" class="sidebar-link">公钥信任</a></li><li class="sidebar-sub-header"><a href="/my-blog/linux/#ssh登录" class="sidebar-link">SSH登录</a></li><li class="sidebar-sub-header"><a href="/my-blog/linux/#目录操作" class="sidebar-link">目录操作</a></li><li class="sidebar-sub-header"><a href="/my-blog/linux/#文本操作" class="sidebar-link">文本操作</a></li><li class="sidebar-sub-header"><a href="/my-blog/linux/#系统信息查看" class="sidebar-link">系统信息查看</a></li><li class="sidebar-sub-header"><a href="/my-blog/linux/#系统进程" class="sidebar-link">系统进程</a></li><li class="sidebar-sub-header"><a href="/my-blog/linux/#网络状况" class="sidebar-link">网络状况</a></li><li class="sidebar-sub-header"><a href="/my-blog/linux/#系统服务管理器" class="sidebar-link">系统服务管理器</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux指令"><a href="#linux指令" class="header-anchor">#</a> Linux指令</h1> <h2 id="公钥信任"><a href="#公钥信任" class="header-anchor">#</a> 公钥信任</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 生成公钥</span>
+ssh-keygen -t rsa -P <span class="token string">''</span>
+
+xubin@xubindeMBP:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/xubin/.ssh/id_rsa):
+/Users/xubin/.ssh/id_rsa already exists.
+Overwrite (y/n)? yes
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/xubin/.ssh/id_rsa.
+Your public key has been saved in /Users/xubin/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:IeFPfrcQ3hhP64SRTAFzGIHl2ROcopl5HotRi2XNOGk xubin@xubindeMBP
+The key's randomart image is:
+<span class="token inserted">+---[RSA 2048]----+</span>
+|      .o*@=o     |
+|     ..oEB=o     |
+|      o@=+O .    |
+|      B=+o @ .   |
+|       =So* *    |
+|      . o. = .   |
+|            o    |
+|                 |
+|                 |
+<span class="token inserted">+----[SHA256]-----+</span>
+
+<span class="token comment"># 查看公钥</span>
+cat .ssh/id_rsa.pub 
+
+<span class="token comment"># 将公钥拷贝到服务器</span>
+scp ~/.ssh/id_rsa.pub root@47.98.252.XXX:/root
+
+<span class="token comment"># 将公钥加入信任列表</span>
+cat id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><h2 id="ssh登录"><a href="#ssh登录" class="header-anchor">#</a> SSH登录</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># root 为用户名</span>
+<span class="token comment"># ip地址</span>
+ssh root@[你的IP地址]
+
+<span class="token comment"># 还可以这样</span>
+ssh 用户名@IP地址 -p 端口号
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="目录操作"><a href="#目录操作" class="header-anchor">#</a> 目录操作</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 查看目录</span>
+pwd
+
+<span class="token comment"># 改变当前目录</span>
+cd [directory_name]
+
+<span class="token comment"># 列出当前目录的文件和子目录</span>
+ls
+
+ls -a     列出所有目录、子目录、文件和隐藏文件
+
+ls -R    列出从当前目录开始的所有的子目录、文件并且一层层往下显示
+
+ls -F     列出文件、目录名并显示出文件类型
+
+ls -t     以修改时间为时间倒序来列出文件、子目录
+
+ls -l      以长列表格式显示文件、目录的详细信息
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="文本操作"><a href="#文本操作" class="header-anchor">#</a> 文本操作</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 查看操作</span>
+cat xxx
+
+<span class="token comment"># 动态查看信息</span>
+tail -f xxx.log
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>vi 编辑内容</li></ul> <blockquote><p>https://www.w3cschool.cn/vim/cjtr1pu3.html</p></blockquote> <h2 id="系统信息查看"><a href="#系统信息查看" class="header-anchor">#</a> 系统信息查看</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 磁盘容量</span>
+df -h
+
+<span class="token comment"># 系统配置</span>
+cat /proc/cpuinfo 
+
+<span class="token comment"># 发行版本</span>
+lsb_release -a
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="系统进程"><a href="#系统进程" class="header-anchor">#</a> 系统进程</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 列出系统中当前运行的那些进程</span>
+ps
+<span class="token deleted">-a 显示同一终端下的所有程序</span>
+<span class="token deleted">-A 显示所有进程</span>
+c  显示进程的真实名称
+<span class="token deleted">-N 反向选择</span>
+<span class="token deleted">-e 等于“-A”</span>
+e  显示环境变量
+f  显示程序间的关系
+<span class="token deleted">-H 显示树状结构</span>
+r  显示当前终端的进程
+T  显示当前终端的所有程序
+u  指定用户的所有进程
+<span class="token deleted">-au 显示较详细的资讯</span>
+<span class="token deleted">-aux 显示所有包含其他使用者的行程 </span>
+
+<span class="token comment"># 动态查看进程变化，监控linux的系统状况</span>
+top 
+<span class="token comment"># top 运行中可以通过 top 的内部命令对进程的显示方式进行控制。内部命令如下：</span>
+s – 改变画面更新频率
+l – 关闭或开启第一部分第一行 top 信息的表示
+t – 关闭或开启第一部分第二行 Tasks 和第三行 Cpus 信息的表示
+m – 关闭或开启第一部分第四行 Mem 和 第五行 Swap 信息的表示
+N – 以 PID 的大小的顺序排列表示进程列表
+P – 以 CPU 占用率大小的顺序排列进程列表
+M – 以内存占用率大小的顺序排列进程列表
+h – 显示帮助
+n – 设置在进程列表所显示进程的数量
+q – 退出 top
+s – 改变画面更新周期
+
+<span class="token comment"># 杀死进程</span>
+kill
+<span class="token deleted">-l  信号，若果不加信号的编号参数，则使用“-l”参数会列出全部的信号名称</span>
+<span class="token deleted">-a  当处理当前进程时，不限制命令名和进程号的对应关系</span>
+<span class="token deleted">-p  指定kill 命令只打印相关进程的进程号，而不发送任何信号</span>
+<span class="token deleted">-s  指定发送信号</span>
+<span class="token deleted">-u  指定用户 </span>
+
+<span class="token comment"># 先用ps查找进程，然后用kill杀掉</span>
+ps -ef|grep vim
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div></div><h2 id="网络状况"><a href="#网络状况" class="header-anchor">#</a> 网络状况</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 监控TCP/IP网络</span>
+netstat
+<span class="token comment"># 列出所有端口情况</span>
+[root@xiesshavip002 ~]# netstat -a      # 列出所有端口
+[root@xiesshavip002 ~]# netstat -at     # 列出所有TCP端口
+[root@xiesshavip002 ~]# netstat -au     # 列出所有UDP端口
+
+<span class="token comment"># 列出所有处于监听状态的Sockets</span>
+[root@xiesshavip002 ~]# netstat -l   # 只显示监听端口
+[root@xiesshavip002 ~]# netstat -lt  # 显示监听TCP端口
+[root@xiesshavip002 ~]# netstat -lu  # 显示监听UDP端口
+[root@xiesshavip002 ~]# netstat -lx  # 显示监听UNIX端口
+
+<span class="token comment"># 显示 PID 和进程名称</span>
+[root@xiesshavip002 ~]# netstat -p
+
+<span class="token comment"># 显示核心路由信息</span>
+[root@xiesshavip002 ~]# netstat -r
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+default         gateway         0.0.0.0         UG        0 0          0 eth0
+192.168.130.0   0.0.0.0         255.255.255.0   U         0 0          0 eth0
+[root@xiesshavip002 ~]# netstat -rn   # 显示数字格式，不查询主机名称
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         192.168.130.1   0.0.0.0         UG        0 0          0 eth0
+192.168.130.0   0.0.0.0         255.255.255.0   U         0 0          0 eth0
+
+<span class="token comment"># 查看端口和服务</span>
+[root@xiesshavip002 ~]# netstat -antp | grep ssh
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      734/sshd            
+tcp        0     52 192.168.130.20:22       119.129.118.189:58737   ESTABLISHED 1846/sshd: root@pts 
+tcp6       0      0 :::22                   :::*                    LISTEN      734/sshd            
+[root@xiesshavip002 ~]# netstat -antp | grep 22
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      734/sshd            
+tcp        0     52 192.168.130.20:22       119.129.118.189:58737   ESTABLISHED 1846/sshd: root@pts 
+tcp6       0      0 :::22                   :::*                    LISTEN      734/sshd            
+[root@xiesshavip002 ~]#
+
+<span class="token comment"># 网络抓包工具</span>
+tcpdump -nn -i eth0 icmp
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div></div><h2 id="系统服务管理器"><a href="#系统服务管理器" class="header-anchor">#</a> 系统服务管理器</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code>systemctl (待完成)
+
+<span class="token comment"># 显示 系统状态:</span>
+systemctl status
+
+<span class="token comment"># </span>
+systemctl enable
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/my-blog/assets/js/app.43e0b704.js" defer></script><script src="/my-blog/assets/js/2.da7dd8de.js" defer></script><script src="/my-blog/assets/js/25.6e01f1fb.js" defer></script>
+  </body>
+</html>

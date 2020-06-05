@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git 指令大全 | JobbbbZhang的博客</title>
+    <meta name="description" content="my blog">
+    <meta name="generator" content="VuePress 1.3.1">
+    
+    
+    <link rel="preload" href="/my-blog/assets/css/0.styles.716af2f0.css" as="style"><link rel="preload" href="/my-blog/assets/js/app.43e0b704.js" as="script"><link rel="preload" href="/my-blog/assets/js/2.da7dd8de.js" as="script"><link rel="preload" href="/my-blog/assets/js/23.fb4f133e.js" as="script"><link rel="prefetch" href="/my-blog/assets/js/10.21d23800.js"><link rel="prefetch" href="/my-blog/assets/js/11.3d2a5cd4.js"><link rel="prefetch" href="/my-blog/assets/js/12.c4b14ab7.js"><link rel="prefetch" href="/my-blog/assets/js/13.43b628c6.js"><link rel="prefetch" href="/my-blog/assets/js/14.4185c043.js"><link rel="prefetch" href="/my-blog/assets/js/15.abc90814.js"><link rel="prefetch" href="/my-blog/assets/js/16.734020c3.js"><link rel="prefetch" href="/my-blog/assets/js/17.de8bf93a.js"><link rel="prefetch" href="/my-blog/assets/js/18.33441712.js"><link rel="prefetch" href="/my-blog/assets/js/19.afb8af86.js"><link rel="prefetch" href="/my-blog/assets/js/20.75170fb5.js"><link rel="prefetch" href="/my-blog/assets/js/21.1f8f2e08.js"><link rel="prefetch" href="/my-blog/assets/js/22.c180a62a.js"><link rel="prefetch" href="/my-blog/assets/js/24.4fb8c784.js"><link rel="prefetch" href="/my-blog/assets/js/25.6e01f1fb.js"><link rel="prefetch" href="/my-blog/assets/js/26.5b8b0d04.js"><link rel="prefetch" href="/my-blog/assets/js/27.37a69a62.js"><link rel="prefetch" href="/my-blog/assets/js/28.ea7998f3.js"><link rel="prefetch" href="/my-blog/assets/js/29.69bf2fdb.js"><link rel="prefetch" href="/my-blog/assets/js/3.d30302f3.js"><link rel="prefetch" href="/my-blog/assets/js/30.25b35296.js"><link rel="prefetch" href="/my-blog/assets/js/4.89f72591.js"><link rel="prefetch" href="/my-blog/assets/js/5.2fae5614.js"><link rel="prefetch" href="/my-blog/assets/js/6.6b705a1d.js"><link rel="prefetch" href="/my-blog/assets/js/7.ccf5f24f.js"><link rel="prefetch" href="/my-blog/assets/js/8.b6dde3c5.js"><link rel="prefetch" href="/my-blog/assets/js/9.1c983b56.js">
+    <link rel="stylesheet" href="/my-blog/assets/css/0.styles.716af2f0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/my-blog/" class="home-link router-link-active"><img src="/my-blog/img/logo.jpeg" alt="JobbbbZhang的博客" class="logo"> <span class="site-name can-hide">JobbbbZhang的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/my-blog/front/javascript/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/my-blog/git/" class="nav-link router-link-exact-active router-link-active">
+  Git
+</a></div><div class="nav-item"><a href="/my-blog/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/my-blog/more/css&amp;html/" class="nav-link">
+  CSS&amp;HTML
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/experience/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/markdown/" class="nav-link">
+  MarkDown语法
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/wiki.html" class="nav-link">
+  WIKI
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/xiaoshuoyiyi" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="联系" class="dropdown-title"><span class="title">联系</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="mailto:xiaoshuoyi@163.com" class="nav-link external">
+  邮箱
+  <!----></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-blog/front/javascript/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/my-blog/git/" class="nav-link router-link-exact-active router-link-active">
+  Git
+</a></div><div class="nav-item"><a href="/my-blog/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/my-blog/more/css&amp;html/" class="nav-link">
+  CSS&amp;HTML
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/experience/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/markdown/" class="nav-link">
+  MarkDown语法
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/interview/" class="nav-link">
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/my-blog/more/wiki.html" class="nav-link">
+  WIKI
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/xiaoshuoyiyi" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="联系" class="dropdown-title"><span class="title">联系</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="mailto:xiaoshuoyi@163.com" class="nav-link external">
+  邮箱
+  <!----></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/my-blog/git/" class="active sidebar-link">Git 指令大全</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/my-blog/git/#_1-新建代码库" class="sidebar-link">1.新建代码库</a></li><li class="sidebar-sub-header"><a href="/my-blog/git/#_2-配置" class="sidebar-link">2.配置</a></li><li class="sidebar-sub-header"><a href="/my-blog/git/#_3-增加-删除文件" class="sidebar-link">3.增加/删除文件</a></li><li class="sidebar-sub-header"><a href="/my-blog/git/#_4-代码提交" class="sidebar-link">4.代码提交</a></li><li class="sidebar-sub-header"><a href="/my-blog/git/#_5-分支" class="sidebar-link">5.分支</a></li><li class="sidebar-sub-header"><a href="/my-blog/git/#_6-标签" class="sidebar-link">6.标签</a></li><li class="sidebar-sub-header"><a href="/my-blog/git/#_7-查看信息" class="sidebar-link">7.查看信息</a></li><li class="sidebar-sub-header"><a href="/my-blog/git/#_8-远程同步" class="sidebar-link">8.远程同步</a></li><li class="sidebar-sub-header"><a href="/my-blog/git/#_9-撤销" class="sidebar-link">9.撤销</a></li><li class="sidebar-sub-header"><a href="/my-blog/git/#_10-其它" class="sidebar-link">10.其它</a></li><li class="sidebar-sub-header"><a href="/my-blog/git/#git远程仓库地址变更本地如何修改" class="sidebar-link">Git远程仓库地址变更本地如何修改</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git-指令大全"><a href="#git-指令大全" class="header-anchor">#</a> Git 指令大全</h1> <p>原文地址：http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html</p> <h2 id="_1-新建代码库"><a href="#_1-新建代码库" class="header-anchor">#</a> 1.新建代码库</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 在当前目录新建一个Git代码库</span>
+<span class="token command">$ git init</span>
+
+<span class="token comment"># 新建一个目录，将其初始化为Git代码库</span>
+<span class="token command">$ git init [project-name]</span>
+
+<span class="token comment"># 下载一个项目和它的整个代码历史</span>
+<span class="token command">$ git clone [url]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_2-配置"><a href="#_2-配置" class="header-anchor">#</a> 2.配置</h2> <p>Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 显示当前的Git配置</span>
+<span class="token command">$ git config<span class="token parameter"> --list</span></span>
+
+<span class="token comment"># 编辑Git配置文件</span>
+<span class="token command">$ git config<span class="token parameter"> -e</span> [--global]</span>
+
+<span class="token comment"># 设置提交代码时的用户信息</span>
+<span class="token command">$ git config [--global] user.name </span><span class="token string">&quot;[name]&quot;</span>
+<span class="token command">$ git config [--global] user.email </span><span class="token string">&quot;[email address]&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="_3-增加-删除文件"><a href="#_3-增加-删除文件" class="header-anchor">#</a> 3.增加/删除文件</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 添加指定文件到暂存区</span>
+<span class="token command">$ git add [file1] [file2] ...</span>
+
+<span class="token comment"># 添加指定目录到暂存区，包括子目录</span>
+<span class="token command">$ git add [dir]</span>
+
+<span class="token comment"># 添加当前目录的所有文件到暂存区</span>
+<span class="token command">$ git add .</span>
+
+<span class="token comment"># 添加每个变化前，都会要求确认</span>
+<span class="token comment"># 对于同一个文件的多处变化，可以实现分次提交</span>
+<span class="token command">$ git add<span class="token parameter"> -p</span></span>
+
+<span class="token comment"># 删除工作区文件，并且将这次删除放入暂存区</span>
+<span class="token command">$ git rm [file1] [file2] ...</span>
+
+<span class="token comment"># 停止追踪指定文件，但该文件会保留在工作区</span>
+<span class="token command">$ git rm<span class="token parameter"> --cached</span> [file]</span>
+
+<span class="token comment"># 改名文件，并且将这个改名放入暂存区</span>
+<span class="token command">$ git mv [file-original] [file-renamed]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h2 id="_4-代码提交"><a href="#_4-代码提交" class="header-anchor">#</a> 4.代码提交</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 提交暂存区到仓库区</span>
+<span class="token command">$ git commit<span class="token parameter"> -m</span> [message]</span>
+
+<span class="token comment"># 提交暂存区的指定文件到仓库区</span>
+<span class="token command">$ git commit [file1] [file2] ...<span class="token parameter"> -m</span> [message]</span>
+
+<span class="token comment"># 提交工作区自上次commit之后的变化，直接到仓库区</span>
+<span class="token command">$ git commit<span class="token parameter"> -a</span></span>
+
+<span class="token comment"># 提交时显示所有diff信息</span>
+<span class="token command">$ git commit<span class="token parameter"> -v</span></span>
+
+<span class="token comment"># 使用一次新的commit，替代上一次提交</span>
+<span class="token comment"># 如果代码没有任何新变化，则用来改写上一次commit的提交信息</span>
+<span class="token command">$ git commit<span class="token parameter"> --amend</span><span class="token parameter"> -m</span> [message]</span>
+
+<span class="token comment"># 重做上一次commit，并包括指定文件的新变化</span>
+<span class="token command">$ git commit<span class="token parameter"> --amend</span> [file1] [file2] ...</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="_5-分支"><a href="#_5-分支" class="header-anchor">#</a> 5.分支</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 列出所有本地分支</span>
+<span class="token command">$ git branch</span>
+
+<span class="token comment"># 列出所有远程分支</span>
+<span class="token command">$ git branch<span class="token parameter"> -r</span></span>
+
+<span class="token comment"># 列出所有本地分支和远程分支</span>
+<span class="token command">$ git branch<span class="token parameter"> -a</span></span>
+
+<span class="token comment"># 新建一个分支，但依然停留在当前分支</span>
+<span class="token command">$ git branch [branch-name]</span>
+
+<span class="token comment"># 新建一个分支，并切换到该分支</span>
+<span class="token command">$ git checkout<span class="token parameter"> -b</span> [branch]</span>
+
+<span class="token comment"># 新建一个分支，指向指定commit</span>
+<span class="token command">$ git branch [branch] [commit]</span>
+
+<span class="token comment"># 新建一个分支，与指定的远程分支建立追踪关系</span>
+<span class="token command">$ git branch<span class="token parameter"> --track</span> [branch] [remote-branch]</span>
+
+<span class="token comment"># 切换到指定分支，并更新工作区</span>
+<span class="token command">$ git checkout [branch-name]</span>
+
+<span class="token comment"># 切换到上一个分支</span>
+<span class="token command">$ git checkout -</span>
+
+<span class="token comment"># 建立追踪关系，在现有分支与指定的远程分支之间</span>
+<span class="token command">$ git branch<span class="token parameter"> --set</span>-upstream [branch] [remote-branch]</span>
+
+<span class="token comment"># 合并指定分支到当前分支</span>
+<span class="token command">$ git merge [branch]</span>
+
+<span class="token comment"># 选择一个commit，合并进当前分支</span>
+<span class="token command">$ git cherry-pick [commit]</span>
+
+<span class="token comment"># 删除分支</span>
+<span class="token command">$ git branch<span class="token parameter"> -d</span> [branch-name]</span>
+
+<span class="token comment"># 删除远程分支</span>
+<span class="token command">$ git push origin<span class="token parameter"> --delete</span> [branch-name]</span>
+<span class="token command">$ git branch<span class="token parameter"> -dr</span> [remote/branch]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br></div></div><h2 id="_6-标签"><a href="#_6-标签" class="header-anchor">#</a> 6.标签</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 列出所有tag</span>
+<span class="token command">$ git tag</span>
+
+<span class="token comment"># 新建一个tag在当前commit</span>
+<span class="token command">$ git tag [tag]</span>
+
+<span class="token comment"># 新建一个tag在指定commit</span>
+<span class="token command">$ git tag [tag] [commit]</span>
+
+<span class="token comment"># 删除本地tag</span>
+<span class="token command">$ git tag<span class="token parameter"> -d</span> [tag]</span>
+
+<span class="token comment"># 删除远程tag</span>
+<span class="token command">$ git push origin :refs/tags/[tagName]</span>
+
+<span class="token comment"># 查看tag信息</span>
+<span class="token command">$ git show [tag]</span>
+
+<span class="token comment"># 提交指定tag</span>
+<span class="token command">$ git push [remote] [tag]</span>
+
+<span class="token comment"># 提交所有tag</span>
+<span class="token command">$ git push [remote]<span class="token parameter"> --tags</span></span>
+
+<span class="token comment"># 新建一个分支，指向某个tag</span>
+<span class="token command">$ git checkout<span class="token parameter"> -b</span> [branch] [tag]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h2 id="_7-查看信息"><a href="#_7-查看信息" class="header-anchor">#</a> 7.查看信息</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 显示有变更的文件</span>
+<span class="token command">$ git status</span>
+
+<span class="token comment"># 显示当前分支的版本历史</span>
+<span class="token command">$ git log</span>
+
+<span class="token comment"># 显示commit历史，以及每次commit发生变更的文件</span>
+<span class="token command">$ git log<span class="token parameter"> --stat</span></span>
+
+<span class="token comment"># 搜索提交历史，根据关键词</span>
+<span class="token command">$ git log<span class="token parameter"> -S</span> [keyword]</span>
+
+<span class="token comment"># 显示某个commit之后的所有变动，每个commit占据一行</span>
+<span class="token command">$ git log [tag] HEAD<span class="token parameter"> --pretty</span>=format:%s</span>
+
+<span class="token comment"># 显示某个commit之后的所有变动，其&quot;提交说明&quot;必须符合搜索条件</span>
+<span class="token command">$ git log [tag] HEAD<span class="token parameter"> --grep</span> feature</span>
+
+<span class="token comment"># 显示某个文件的版本历史，包括文件改名</span>
+<span class="token command">$ git log<span class="token parameter"> --follow</span> [file]</span>
+<span class="token command">$ git whatchanged [file]</span>
+
+<span class="token comment"># 显示指定文件相关的每一次diff</span>
+<span class="token command">$ git log<span class="token parameter"> -p</span> [file]</span>
+
+<span class="token comment"># 显示过去5次提交</span>
+<span class="token command">$ git log<span class="token parameter"> -5</span><span class="token parameter"> --pretty</span><span class="token parameter"> --oneline</span></span>
+
+<span class="token comment"># 显示所有提交过的用户，按提交次数排序</span>
+<span class="token command">$ git shortlog<span class="token parameter"> -sn</span></span>
+
+<span class="token comment"># 显示指定文件是什么人在什么时间修改过</span>
+<span class="token command">$ git blame [file]</span>
+
+<span class="token comment"># 显示暂存区和工作区的差异</span>
+<span class="token command">$ git diff</span>
+
+<span class="token comment"># 显示暂存区和上一个commit的差异</span>
+<span class="token command">$ git diff<span class="token parameter"> --cached</span> [file]</span>
+
+<span class="token comment"># 显示工作区与当前分支最新commit之间的差异</span>
+<span class="token command">$ git diff HEAD</span>
+
+<span class="token comment"># 显示两次提交之间的差异</span>
+<span class="token command">$ git diff [first-branch]...[second-branch]</span>
+
+<span class="token comment"># 显示今天你写了多少行代码</span>
+<span class="token command">$ git diff<span class="token parameter"> --shortstat</span> </span><span class="token string">&quot;@{0 day ago}&quot;</span>
+
+<span class="token comment"># 显示某次提交的元数据和内容变化</span>
+<span class="token command">$ git show [commit]</span>
+
+<span class="token comment"># 显示某次提交发生变化的文件</span>
+<span class="token command">$ git show<span class="token parameter"> --name</span>-only [commit]</span>
+
+<span class="token comment"># 显示某次提交时，某个文件的内容</span>
+<span class="token command">$ git show [commit]:[filename]</span>
+
+<span class="token comment"># 显示当前分支的最近几次提交</span>
+<span class="token command">$ git reflog</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br></div></div><h2 id="_8-远程同步"><a href="#_8-远程同步" class="header-anchor">#</a> 8.远程同步</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 下载远程仓库的所有变动</span>
+<span class="token command">$ git fetch [remote]</span>
+
+<span class="token comment"># 显示所有远程仓库</span>
+<span class="token command">$ git remote<span class="token parameter"> -v</span></span>
+
+<span class="token comment"># 显示某个远程仓库的信息</span>
+<span class="token command">$ git remote show [remote]</span>
+
+<span class="token comment"># 增加一个新的远程仓库，并命名</span>
+<span class="token command">$ git remote add [shortname] [url]</span>
+
+<span class="token comment"># 取回远程仓库的变化，并与本地分支合并</span>
+<span class="token command">$ git pull [remote] [branch]</span>
+
+<span class="token comment"># 上传本地指定分支到远程仓库</span>
+<span class="token command">$ git push [remote] [branch]</span>
+
+<span class="token comment"># 强行推送当前分支到远程仓库，即使有冲突</span>
+<span class="token command">$ git push [remote]<span class="token parameter"> --force</span></span>
+
+<span class="token comment"># 推送所有分支到远程仓库</span>
+<span class="token command">$ git push [remote]<span class="token parameter"> --all</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h2 id="_9-撤销"><a href="#_9-撤销" class="header-anchor">#</a> 9.撤销</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 恢复暂存区的指定文件到工作区</span>
+<span class="token command">$ git checkout [file]</span>
+
+<span class="token comment"># 恢复某个commit的指定文件到暂存区和工作区</span>
+<span class="token command">$ git checkout [commit] [file]</span>
+
+<span class="token comment"># 恢复暂存区的所有文件到工作区</span>
+<span class="token command">$ git checkout .</span>
+
+<span class="token comment"># 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span>
+<span class="token command">$ git reset [file]</span>
+
+<span class="token comment"># 重置暂存区与工作区，与上一次commit保持一致</span>
+<span class="token command">$ git reset<span class="token parameter"> --hard</span></span>
+
+<span class="token comment"># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span>
+<span class="token command">$ git reset [commit]</span>
+
+<span class="token comment"># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span>
+<span class="token command">$ git reset<span class="token parameter"> --hard</span> [commit]</span>
+
+<span class="token comment"># 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span>
+<span class="token command">$ git reset<span class="token parameter"> --keep</span> [commit]</span>
+
+<span class="token comment"># 新建一个commit，用来撤销指定commit</span>
+<span class="token comment"># 后者的所有变化都将被前者抵消，并且应用到当前分支</span>
+<span class="token command">$ git revert [commit]</span>
+
+<span class="token comment"># 暂时将未提交的变化移除，稍后再移入</span>
+<span class="token command">$ git stash</span>
+<span class="token command">$ git stash pop</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h2 id="_10-其它"><a href="#_10-其它" class="header-anchor">#</a> 10.其它</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 生成一个可供发布的压缩包</span>
+<span class="token command">$ git archive</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="git远程仓库地址变更本地如何修改"><a href="#git远程仓库地址变更本地如何修改" class="header-anchor">#</a> Git远程仓库地址变更本地如何修改</h2> <ol><li>通过命令直接修改远程地址</li></ol> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 查看所有远程仓库</span>
+git remote
+<span class="token comment"># 查看指定远程仓库地址</span>
+git remote xxx 
+<span class="token comment"># 设置新的地址</span>
+git remote set-url origin [newUrl]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="2"><li>通过命令先删除再添加远程仓库</li></ol> <div class="language-git line-numbers-mode"><pre class="language-git"><code><span class="token comment"># 查看所有远程仓库</span>
+git remote
+<span class="token comment"># 查看指定远程仓库地址</span>
+git remote xxx 
+<span class="token comment"># 先删除旧的地址</span>
+git remote rm origin
+<span class="token comment"># 重新设置新的地址</span>
+git remote add origin [newUrl]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ol start="3"><li>直接修改配置文件
+进入git_test/.git</li></ol> <div class="language-cmd line-numbers-mode"><pre class="language-text"><code>vim config
+[core]
+repositoryformatversion = 0
+filemode = true
+logallrefupdates = true
+precomposeunicode = true
+[remote &quot;origin&quot;]
+url = http://192.168.100.235:9797/shimanqiang/assistant.git
+fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;master&quot;]
+remote = origin
+merge = refs/heads/master
+修改 [remote “origin”]下面的url即可
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/my-blog/assets/js/app.43e0b704.js" defer></script><script src="/my-blog/assets/js/2.da7dd8de.js" defer></script><script src="/my-blog/assets/js/23.fb4f133e.js" defer></script>
+  </body>
+</html>
